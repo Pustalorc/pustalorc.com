@@ -1,0 +1,33 @@
+{
+  "name": "pustalorc.com",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Personal website",
+  "author": "Pustalorc",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "lint": "npx eslint src/",
+    "lint-fix": "npx eslint --fix src/"
+  },
+  "dependencies": {
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "latest",
+    "@mui/material": "latest",
+    "@mui/styles": "latest",
+    "gatsby": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-helmet": "latest",
+    "styled-components": "latest"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-plugin-react": "latest"
+  }
+}
