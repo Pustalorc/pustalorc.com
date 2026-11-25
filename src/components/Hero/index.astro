@@ -1,0 +1,29 @@
+---
+import Button from '@components/Button/index.astro';
+import external from '@data/links/external';
+import profile from '@data/profile';
+import strings from '@data/strings';
+import { Icon } from 'astro-icon/components';
+---
+
+<section class="container flex flex-1 flex-col items-center justify-center gap-6 py-16 text-center">
+  <p class="prompt">{strings.hero.greeting}</p>
+  <h1 class="font-display text-4xl font-bold leading-tight md:text-6xl">{profile.name}</h1>
+  <p class="text-text-muted max-w-2xl text-lg">{profile.intro}</p>
+
+  <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
+    <Button href={external.portfolio}>{strings.hero.portfolio}</Button>
+    <a href={external.mailTo} aria-label={strings.hero.emailAria} class="icon-button">
+      <Icon name="mingcute:mail-fill" class="h-4 w-4" />
+    </a>
+    <a
+      href={external.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={strings.hero.githubAria}
+      class="icon-button"
+    >
+      <Icon name="simple-icons:github" class="h-4 w-4" />
+    </a>
+  </div>
+</section>

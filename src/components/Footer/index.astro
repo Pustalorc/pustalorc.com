@@ -1,0 +1,33 @@
+---
+import external from '@data/links/external';
+import strings from '@data/strings';
+import { formatFullDate } from '@utils/dates';
+
+export interface Props {
+  copyright: string;
+}
+
+const { copyright } = Astro.props as Props;
+---
+
+<footer class="border-border border-t">
+  <div class="container grid grid-cols-1 gap-4 py-8 text-sm items-center md:grid-cols-2">
+    <p class="text-text-muted mono text-xs">{copyright}</p>
+    <p class="text-text-muted mono text-xs flex flex-col md:items-end">
+      <span>
+        {strings.footer.lastBuiltOn}
+        {formatFullDate(new Date())}
+      </span>
+      <span>
+        {strings.footer.withText}{' '}
+        <a href={external.astro} target="_blank" rel="noopener noreferrer" class="link">
+          {strings.footer.astro}
+        </a>
+        {strings.footer.separator}{' '}
+        <a href={external.githubRepo} target="_blank" rel="noopener noreferrer" class="link">
+          {strings.footer.sourceCode}
+        </a>
+      </span>
+    </p>
+  </div>
+</footer>
